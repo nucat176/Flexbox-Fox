@@ -21452,9 +21452,33 @@
 	
 	var _app2 = _interopRequireDefault(_app);
 	
-	var _level_one = __webpack_require__(228);
+	var _level_one = __webpack_require__(230);
 	
 	var _level_one2 = _interopRequireDefault(_level_one);
+	
+	var _level_two = __webpack_require__(231);
+	
+	var _level_two2 = _interopRequireDefault(_level_two);
+	
+	var _level_three = __webpack_require__(232);
+	
+	var _level_three2 = _interopRequireDefault(_level_three);
+	
+	var _level_four = __webpack_require__(233);
+	
+	var _level_four2 = _interopRequireDefault(_level_four);
+	
+	var _level_five = __webpack_require__(234);
+	
+	var _level_five2 = _interopRequireDefault(_level_five);
+	
+	var _level_six = __webpack_require__(235);
+	
+	var _level_six2 = _interopRequireDefault(_level_six);
+	
+	var _level_seven = __webpack_require__(236);
+	
+	var _level_seven2 = _interopRequireDefault(_level_seven);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -21465,7 +21489,13 @@
 	    _react2.default.createElement(
 	      _reactRouter.Route,
 	      { path: '/', component: _app2.default },
-	      _react2.default.createElement(_reactRouter.IndexRoute, { component: _level_one2.default })
+	      _react2.default.createElement(_reactRouter.IndexRoute, { component: _level_one2.default }),
+	      _react2.default.createElement(_reactRouter.Route, { path: '2', component: _level_two2.default }),
+	      _react2.default.createElement(_reactRouter.Route, { path: '3', component: _level_three2.default }),
+	      _react2.default.createElement(_reactRouter.Route, { path: '4', component: _level_four2.default }),
+	      _react2.default.createElement(_reactRouter.Route, { path: '5', component: _level_five2.default }),
+	      _react2.default.createElement(_reactRouter.Route, { path: '6', component: _level_six2.default }),
+	      _react2.default.createElement(_reactRouter.Route, { path: '7', component: _level_seven2.default })
 	    )
 	  );
 	};
@@ -26378,7 +26408,62 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 228 */
+/* 228 */,
+/* 229 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var App = function (_React$Component) {
+	  _inherits(App, _React$Component);
+	
+	  function App(props) {
+	    _classCallCheck(this, App);
+	
+	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+	  }
+	
+	  _createClass(App, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "app" },
+	        _react2.default.createElement(
+	          "h1",
+	          { className: "game-title" },
+	          "Flexbox Fox"
+	        ),
+	        this.props.children
+	      );
+	    }
+	  }]);
+	
+	  return App;
+	}(_react2.default.Component);
+	
+	exports.default = App;
+
+/***/ },
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26392,6 +26477,8 @@
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(173);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -26428,7 +26515,12 @@
 	    }
 	  }, {
 	    key: 'handleSubmit',
-	    value: function handleSubmit() {}
+	    value: function handleSubmit(e) {
+	      return function (e) {
+	        e.preventDefault();
+	        _reactRouter.hashHistory.push("/2");
+	      };
+	    }
 	  }, {
 	    key: 'renderNextButton',
 	    value: function renderNextButton() {
@@ -26438,6 +26530,8 @@
 	          { type: 'submit', className: 'submit-button' },
 	          'Next Level!'
 	        );
+	      } else {
+	        return _react2.default.createElement('span', null);
 	      }
 	    }
 	  }, {
@@ -26452,7 +26546,7 @@
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'description' },
-	            'Welcome to Flexbox Fox, a game where you help Mr. Fox and his friends by writing CSS code! Guide Mr. Fox to the lilypad on the right using the jusitfy-content property, which aligns items horizontally and accepts the following values:',
+	            'Welcome to Flexbox Fox, a game where you help Mr. Fox and his friends by writing CSS code! Guide Mr. Fox to the den on the right using the jusitfy-content property, which aligns items horizontally and accepts the following values:',
 	            _react2.default.createElement('br', null),
 	            _react2.default.createElement('br', null),
 	            _react2.default.createElement(
@@ -26520,8 +26614,16 @@
 	          _react2.default.createElement(
 	            'span',
 	            { className: 'input-console' },
-	            'justify-content: \xA0',
-	            _react2.default.createElement('input', { type: 'text', onChange: this.update(), className: 'css-input', placeholder: 'Insert CSS command here!' }),
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'not-submit' },
+	              'display: flex;',
+	              _react2.default.createElement('br', null),
+	              'justify-content: \xA0',
+	              _react2.default.createElement('input', { type: 'text', onChange: this.update(), className: 'css-input', placeholder: 'Insert CSS command here!' }),
+	              '\xA0 ;',
+	              _react2.default.createElement('br', null)
+	            ),
 	            this.renderNextButton()
 	          )
 	        ),
@@ -26549,36 +26651,598 @@
 	exports.default = LevelOne;
 
 /***/ },
-/* 229 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _reactRouter = __webpack_require__(173);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var App = function App(_ref) {
-	  var children = _ref.children;
-	  return _react2.default.createElement(
-	    "div",
-	    { className: "app" },
-	    _react2.default.createElement(
-	      "h1",
-	      { className: "game-title" },
-	      "Flexbox Fox"
-	    ),
-	    children
-	  );
-	};
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	exports.default = App;
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var LevelTwo = function (_React$Component) {
+	  _inherits(LevelTwo, _React$Component);
+	
+	  function LevelTwo(props) {
+	    _classCallCheck(this, LevelTwo);
+	
+	    var _this = _possibleConstructorReturn(this, (LevelTwo.__proto__ || Object.getPrototypeOf(LevelTwo)).call(this, props));
+	
+	    _this.state = { display: 'flex', justifyContent: 'flex-start' };
+	    _this.answer = { display: 'flex', justifyContent: 'center' };
+	    _this.handleSubmit = _this.handleSubmit.bind(_this);
+	    _this.update = _this.update.bind(_this);
+	    _this.renderNextButton = _this.renderNextButton.bind(_this);
+	    return _this;
+	  }
+	
+	  _createClass(LevelTwo, [{
+	    key: 'update',
+	    value: function update() {
+	      var _this2 = this;
+	
+	      return function (e) {
+	        return _this2.setState({ justifyContent: e.currentTarget.value });
+	      };
+	    }
+	  }, {
+	    key: 'handleSubmit',
+	    value: function handleSubmit(e) {
+	      return function (e) {
+	        e.preventDefault();
+	        _reactRouter.hashHistory.push("/3");
+	      };
+	    }
+	  }, {
+	    key: 'renderNextButton',
+	    value: function renderNextButton() {
+	      if (this.state.justifyContent === this.answer.justifyContent) {
+	        return _react2.default.createElement(
+	          'button',
+	          { type: 'submit', className: 'submit-button' },
+	          'Next Level!'
+	        );
+	      } else {
+	        return _react2.default.createElement('span', null);
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'section',
+	        { className: 'flexbox-fox' },
+	        _react2.default.createElement(
+	          'form',
+	          { className: 'console-form', onSubmit: this.handleSubmit() },
+	          _react2.default.createElement(
+	            'p',
+	            { className: 'description' },
+	            'Use justify-content again to help these foxes get to their dens. Remember that this CSS property aligns items horizontally and accepts the following values:',
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	              'ul',
+	              { className: 'commands-list' },
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'command-title' },
+	                  'flex-start'
+	                ),
+	                ': Items align to the left side of the container.'
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'command-title' },
+	                  'flex-end'
+	                ),
+	                ': Items align to the right side of the container.'
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'command-title' },
+	                  'center'
+	                ),
+	                ': Items align at the center of the container.'
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'command-title' },
+	                  'space-between'
+	                ),
+	                ': Items display with equal spacing between them.'
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'command-title' },
+	                  'space-around'
+	                ),
+	                ': Items display with equal spacing around them.'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'span',
+	            { className: 'input-console' },
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'not-submit' },
+	              'display: flex;',
+	              _react2.default.createElement('br', null),
+	              'justify-content: \xA0',
+	              _react2.default.createElement('input', { type: 'text', onChange: this.update(), className: 'css-input', placeholder: 'Insert CSS command here!' }),
+	              '\xA0 ;'
+	            ),
+	            this.renderNextButton()
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'fox-area', style: this.state },
+	          _react2.default.createElement('img', {
+	            className: 'fox',
+	            src: 'http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235465/fox13_awuzpm.png' }),
+	          _react2.default.createElement('img', {
+	            className: 'fox',
+	            src: 'http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235465/fox13_awuzpm.png' }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'den-area', style: this.answer },
+	            _react2.default.createElement('img', {
+	              className: 'den',
+	              src: 'http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235787/cave-entrance-clip-art-at-clker-com-vector-clip-art-online-royalty-fVB7sf-clipart_lm9nfy.png' }),
+	            _react2.default.createElement('img', {
+	              className: 'den',
+	              src: 'http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235787/cave-entrance-clip-art-at-clker-com-vector-clip-art-online-royalty-fVB7sf-clipart_lm9nfy.png' })
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return LevelTwo;
+	}(_react2.default.Component);
+	
+	exports.default = LevelTwo;
+
+/***/ },
+/* 232 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(173);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var LevelThree = function (_React$Component) {
+	  _inherits(LevelThree, _React$Component);
+	
+	  function LevelThree(props) {
+	    _classCallCheck(this, LevelThree);
+	
+	    var _this = _possibleConstructorReturn(this, (LevelThree.__proto__ || Object.getPrototypeOf(LevelThree)).call(this, props));
+	
+	    _this.state = { display: 'flex', justifyContent: 'flex-start' };
+	    _this.answer = { display: 'flex', justifyContent: 'space-around' };
+	    _this.handleSubmit = _this.handleSubmit.bind(_this);
+	    _this.update = _this.update.bind(_this);
+	    _this.renderNextButton = _this.renderNextButton.bind(_this);
+	    return _this;
+	  }
+	
+	  _createClass(LevelThree, [{
+	    key: 'update',
+	    value: function update() {
+	      var _this2 = this;
+	
+	      return function (e) {
+	        return _this2.setState({ justifyContent: e.currentTarget.value });
+	      };
+	    }
+	  }, {
+	    key: 'handleSubmit',
+	    value: function handleSubmit(e) {
+	      return function (e) {
+	        e.preventDefault();
+	        _reactRouter.hashHistory.push("/4");
+	      };
+	    }
+	  }, {
+	    key: 'renderNextButton',
+	    value: function renderNextButton() {
+	      if (this.state.justifyContent === this.answer.justifyContent) {
+	        return _react2.default.createElement(
+	          'button',
+	          { type: 'submit', className: 'submit-button' },
+	          'Next Level!'
+	        );
+	      } else {
+	        return _react2.default.createElement('span', null);
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'section',
+	        { className: 'flexbox-fox' },
+	        _react2.default.createElement(
+	          'form',
+	          { className: 'console-form', onSubmit: this.handleSubmit() },
+	          _react2.default.createElement(
+	            'p',
+	            { className: 'description' },
+	            'Help all three foxes get find their dens using justify-content. This time, the dens have lots of space around them.',
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            'Remember that this CSS property aligns items horizontally and accepts the following values:',
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	              'ul',
+	              { className: 'commands-list' },
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'command-title' },
+	                  'flex-start'
+	                ),
+	                ': Items align to the left side of the container.'
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'command-title' },
+	                  'flex-end'
+	                ),
+	                ': Items align to the right side of the container.'
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'command-title' },
+	                  'center'
+	                ),
+	                ': Items align at the center of the container.'
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'command-title' },
+	                  'space-between'
+	                ),
+	                ': Items display with equal spacing between them.'
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'command-title' },
+	                  'space-around'
+	                ),
+	                ': Items display with equal spacing around them.'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'span',
+	            { className: 'input-console' },
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'not-submit' },
+	              'display: flex;',
+	              _react2.default.createElement('br', null),
+	              'justify-content: \xA0',
+	              _react2.default.createElement('input', { type: 'text', onChange: this.update(), className: 'css-input', placeholder: 'Insert CSS command here!' }),
+	              '\xA0 ;'
+	            ),
+	            this.renderNextButton()
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'fox-area', style: this.state },
+	          _react2.default.createElement('img', {
+	            className: 'fox',
+	            src: 'http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235465/fox13_awuzpm.png' }),
+	          _react2.default.createElement('img', {
+	            className: 'fox',
+	            src: 'http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235465/fox13_awuzpm.png' }),
+	          _react2.default.createElement('img', {
+	            className: 'fox',
+	            src: 'http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235465/fox13_awuzpm.png' }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'den-area', style: this.answer },
+	            _react2.default.createElement('img', {
+	              className: 'den',
+	              src: 'http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235787/cave-entrance-clip-art-at-clker-com-vector-clip-art-online-royalty-fVB7sf-clipart_lm9nfy.png' }),
+	            _react2.default.createElement('img', {
+	              className: 'den',
+	              src: 'http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235787/cave-entrance-clip-art-at-clker-com-vector-clip-art-online-royalty-fVB7sf-clipart_lm9nfy.png' }),
+	            _react2.default.createElement('img', {
+	              className: 'den',
+	              src: 'http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235787/cave-entrance-clip-art-at-clker-com-vector-clip-art-online-royalty-fVB7sf-clipart_lm9nfy.png' })
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return LevelThree;
+	}(_react2.default.Component);
+	
+	exports.default = LevelThree;
+
+/***/ },
+/* 233 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(173);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var LevelThree = function (_React$Component) {
+	  _inherits(LevelThree, _React$Component);
+	
+	  function LevelThree(props) {
+	    _classCallCheck(this, LevelThree);
+	
+	    var _this = _possibleConstructorReturn(this, (LevelThree.__proto__ || Object.getPrototypeOf(LevelThree)).call(this, props));
+	
+	    _this.state = { display: 'flex', justifyContent: 'flex-start' };
+	    _this.answer = { display: 'flex', justifyContent: 'space-between' };
+	    _this.handleSubmit = _this.handleSubmit.bind(_this);
+	    _this.update = _this.update.bind(_this);
+	    _this.renderNextButton = _this.renderNextButton.bind(_this);
+	    return _this;
+	  }
+	
+	  _createClass(LevelThree, [{
+	    key: 'update',
+	    value: function update() {
+	      var _this2 = this;
+	
+	      return function (e) {
+	        return _this2.setState({ justifyContent: e.currentTarget.value });
+	      };
+	    }
+	  }, {
+	    key: 'handleSubmit',
+	    value: function handleSubmit(e) {
+	      return function (e) {
+	        e.preventDefault();
+	        _reactRouter.hashHistory.push("/5");
+	      };
+	    }
+	  }, {
+	    key: 'renderNextButton',
+	    value: function renderNextButton() {
+	      if (this.state.justifyContent === this.answer.justifyContent) {
+	        return _react2.default.createElement(
+	          'button',
+	          { type: 'submit', className: 'submit-button' },
+	          'Next Level!'
+	        );
+	      } else {
+	        return _react2.default.createElement('span', null);
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'section',
+	        { className: 'flexbox-fox' },
+	        _react2.default.createElement(
+	          'form',
+	          { className: 'console-form', onSubmit: this.handleSubmit() },
+	          _react2.default.createElement(
+	            'p',
+	            { className: 'description' },
+	            'Help all three foxes get find their dens using justify-content. This time, the dens on the edge have moved to the edge of the garden.',
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            'Remember that this CSS property aligns items horizontally and accepts the following values:',
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	              'ul',
+	              { className: 'commands-list' },
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'command-title' },
+	                  'flex-start'
+	                ),
+	                ': Items align to the left side of the container.'
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'command-title' },
+	                  'flex-end'
+	                ),
+	                ': Items align to the right side of the container.'
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'command-title' },
+	                  'center'
+	                ),
+	                ': Items align at the center of the container.'
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'command-title' },
+	                  'space-between'
+	                ),
+	                ': Items display with equal spacing between them.'
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'command-title' },
+	                  'space-around'
+	                ),
+	                ': Items display with equal spacing around them.'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'span',
+	            { className: 'input-console' },
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'not-submit' },
+	              'display: flex;',
+	              _react2.default.createElement('br', null),
+	              'justify-content: \xA0',
+	              _react2.default.createElement('input', { type: 'text', onChange: this.update(), className: 'css-input', placeholder: 'Insert CSS command here!' }),
+	              '\xA0 ;'
+	            ),
+	            this.renderNextButton()
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'fox-area', style: this.state },
+	          _react2.default.createElement('img', {
+	            className: 'fox',
+	            src: 'http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235465/fox13_awuzpm.png' }),
+	          _react2.default.createElement('img', {
+	            className: 'fox',
+	            src: 'http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235465/fox13_awuzpm.png' }),
+	          _react2.default.createElement('img', {
+	            className: 'fox',
+	            src: 'http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235465/fox13_awuzpm.png' }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'den-area', style: this.answer },
+	            _react2.default.createElement('img', {
+	              className: 'den',
+	              src: 'http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235787/cave-entrance-clip-art-at-clker-com-vector-clip-art-online-royalty-fVB7sf-clipart_lm9nfy.png' }),
+	            _react2.default.createElement('img', {
+	              className: 'den',
+	              src: 'http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235787/cave-entrance-clip-art-at-clker-com-vector-clip-art-online-royalty-fVB7sf-clipart_lm9nfy.png' }),
+	            _react2.default.createElement('img', {
+	              className: 'den',
+	              src: 'http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235787/cave-entrance-clip-art-at-clker-com-vector-clip-art-online-royalty-fVB7sf-clipart_lm9nfy.png' })
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return LevelThree;
+	}(_react2.default.Component);
+	
+	exports.default = LevelThree;
+
+/***/ },
+/* 234 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+/***/ },
+/* 235 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+/***/ },
+/* 236 */
+/***/ function(module, exports) {
+
+	"use strict";
 
 /***/ }
 /******/ ]);

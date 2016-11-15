@@ -1,11 +1,13 @@
 import React from 'react';
+import {hashHistory} from 'react-router';
 
-class LevelOne extends React.Component {
+
+class LevelTwo extends React.Component {
 
   constructor(props){
     super(props);
     this.state = {display: 'flex', justifyContent: 'flex-start'};
-    this.answer = {display: 'flex', justifyContent: 'flex-end'};
+    this.answer = {display: 'flex', justifyContent: 'center'};
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
     this.renderNextButton = this.renderNextButton.bind(this);
@@ -15,8 +17,11 @@ class LevelOne extends React.Component {
     return e => this.setState({justifyContent: e.currentTarget.value})
   }
 
-  handleSubmit(){
-
+  handleSubmit(e){
+    return e => {
+      e.preventDefault();
+      hashHistory.push("/3");
+    }
   }
 
   renderNextButton(){
@@ -24,6 +29,8 @@ class LevelOne extends React.Component {
       return (
         <button type="submit" className="submit-button">Next Level!</button>
       );
+    } else {
+      return (<span></span>);
     }
   }
 
@@ -32,9 +39,8 @@ class LevelOne extends React.Component {
       <section className="flexbox-fox">
         <form className="console-form" onSubmit={this.handleSubmit()}>
           <p className="description">
-            Welcome to Flexbox Fox, a game where you help Mr. Fox and his friends
-            by writing CSS code! Guide Mr. Fox to the lilypad on the right using the
-            jusitfy-content property, which aligns items horizontally and accepts the
+          Use justify-content again to help these foxes get to their dens. Remember that
+          this CSS property aligns items horizontally and accepts the
             following values:
             <br/>
             <br/>
@@ -60,14 +66,17 @@ class LevelOne extends React.Component {
                 : Items display with equal spacing around them.
               </li>
             </ul>
-            For example, <span className="command-title">justify-content: flex-end</span>
-            &nbsp;
-            will move Mr. Fox to the right. Try it below!
           </p>
           <span className="input-console">
-            justify-content:
-            &nbsp;
-            <input type="text" onChange={this.update()} className="css-input" placeholder="Insert CSS command here!"/>
+            <span className="not-submit">
+              display: flex;
+              <br/>
+              justify-content:
+              &nbsp;
+              <input type="text" onChange={this.update()} className="css-input" placeholder="Insert CSS command here!"/>
+              &nbsp;
+              ;
+            </span>
             {this.renderNextButton()}
           </span>
         </form>
@@ -75,7 +84,13 @@ class LevelOne extends React.Component {
           <img
             className="fox"
             src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235465/fox13_awuzpm.png"/>
+          <img
+            className="fox"
+            src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235465/fox13_awuzpm.png"/>
           <div className='den-area' style={this.answer}>
+            <img
+              className="den"
+              src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235787/cave-entrance-clip-art-at-clker-com-vector-clip-art-online-royalty-fVB7sf-clipart_lm9nfy.png"/>
             <img
               className="den"
               src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235787/cave-entrance-clip-art-at-clker-com-vector-clip-art-online-royalty-fVB7sf-clipart_lm9nfy.png"/>
@@ -86,4 +101,4 @@ class LevelOne extends React.Component {
   }
 }
 
-export default LevelOne;
+export default LevelTwo;
