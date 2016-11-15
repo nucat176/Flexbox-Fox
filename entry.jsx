@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LevelOne from './level_one';
+import Root from './root';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById('root');
-  ReactDOM.render(<LevelOne/>, root);
+  ReactDOM.render(<Root/>, root);
 });
