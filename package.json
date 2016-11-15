@@ -1,0 +1,29 @@
+{
+  "name": "Flexbox-Fox",
+  "version": "1.0.0",
+  "description": "### Background",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nucat176/Flexbox-Fox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nucat176/Flexbox-Fox/issues"
+  },
+  "homepage": "https://github.com/nucat176/Flexbox-Fox#readme",
+  "dependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "webpack": "^1.13.3"
+  }
+}
