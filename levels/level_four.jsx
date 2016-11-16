@@ -2,7 +2,7 @@ import React from 'react';
 import {hashHistory} from 'react-router';
 
 
-class LevelThree extends React.Component {
+class LevelFour extends React.Component {
 
   constructor(props){
     super(props);
@@ -88,20 +88,20 @@ class LevelThree extends React.Component {
             className="fox"
             src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235465/fox13_awuzpm.png"/>
           <img
-            className="fox"
+            className="fox2"
             src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235465/fox13_awuzpm.png"/>
           <img
-            className="fox"
+            className="fox3"
             src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235465/fox13_awuzpm.png"/>
           <div className='den-area' style={this.answer}>
             <img
               className="den"
               src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235787/cave-entrance-clip-art-at-clker-com-vector-clip-art-online-royalty-fVB7sf-clipart_lm9nfy.png"/>
             <img
-              className="den"
+              className="den2"
               src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235787/cave-entrance-clip-art-at-clker-com-vector-clip-art-online-royalty-fVB7sf-clipart_lm9nfy.png"/>
             <img
-              className="den"
+              className="den3"
               src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235787/cave-entrance-clip-art-at-clker-com-vector-clip-art-online-royalty-fVB7sf-clipart_lm9nfy.png"/>
           </div>
         </div>
@@ -110,4 +110,4 @@ class LevelThree extends React.Component {
   }
 }
 
-export default LevelThree;
+export default LevelFour;

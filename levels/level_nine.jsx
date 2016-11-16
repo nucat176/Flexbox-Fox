@@ -2,30 +2,30 @@ import React from 'react';
 import {hashHistory} from 'react-router';
 
 
-class LevelFive extends React.Component {
+class LevelNine extends React.Component {
 
   constructor(props){
     super(props);
-    this.state = {display: 'flex', alignItems: 'flex-start'};
-    this.answer = {display: 'flex', alignItems: 'flex-end'};
+    this.state = {display: 'flex', flexDirection: 'row'};
+    this.answer = {display: 'flex', flexDirection: 'column'};
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
     this.renderNextButton = this.renderNextButton.bind(this);
   }
 
   update(){
-    return e => this.setState({alignItems: e.currentTarget.value})
+    return e => this.setState({flexDirection: e.currentTarget.value})
   }
 
   handleSubmit(e){
     return e => {
       e.preventDefault();
-      hashHistory.push("/6");
+      hashHistory.push("/10");
     }
   }
 
   renderNextButton(){
-    if(this.state.alignItems === this.answer.alignItems){
+    if(this.state.flexDirection === this.answer.flexDirection){
       return (
         <button type="submit" className="submit-button">Next Level!</button>
       );
@@ -39,30 +39,26 @@ class LevelFive extends React.Component {
       <section className="flexbox-fox">
         <form className="console-form" onSubmit={this.handleSubmit()}>
           <p className="description">
-            Now use align-items to help the foxes get to the bottom of the garden.
-            This CSS property aligns items vertically and accepts the following values:
+            Help the foxes find their column of dens using flex-direction.
+            This CSS defines the direction items are placed in the container, and accepts the following values:
             <br/>
             <br/>
             <ul className="commands-list">
               <li>
-                <span className="command-title">flex-start</span>
-                : Items align to the top of the container.
+                <span className="command-title">row</span>
+                : Items are placed the same as the text direction.
               </li>
               <li>
-                <span className="command-title">flex-end</span>
-                : Items align to the bottom of the container.
+                <span className="command-title">row-reverse</span>
+                : Items are placed opposite to the text direction.
               </li>
               <li>
-                <span className="command-title">center</span>
-                : Items align at the vertical center of the container.
+                <span className="command-title">column</span>
+                : Items are placed top to bottom.
               </li>
               <li>
-                <span className="command-title">baseline</span>
-                : Items display at the baseline of the container.
-              </li>
-              <li>
-                <span className="command-title">stretch</span>
-                : Items are stretched to fit the container.
+                <span className="command-title">column-reverse</span>
+                : Items are placed bottom to top.
               </li>
             </ul>
           </p>
@@ -70,7 +66,7 @@ class LevelFive extends React.Component {
             <span className="not-submit">
               display: flex;
               <br/>
-              align-items:
+              flex-direction:
               &nbsp;
               <input type="text" onChange={this.update()} className="css-input" placeholder="Insert CSS command here!"/>
               &nbsp;
@@ -102,8 +98,8 @@ class LevelFive extends React.Component {
           </div>
         </div>
       </section>
-    )
+    );
   }
 }
 
-export default LevelFive;
+export default LevelNine;

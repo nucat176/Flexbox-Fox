@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   height: 100%;
+  min-height: 800px;
   width: 100%;
   font-family: 'Fredoka One';
   color: orange;
@@ -37,6 +38,7 @@
 .fox-area {
   padding: 20px;
   width: 50%;
+  min-height: 800px;
   background-color: green;
   position: relative;
 }
@@ -69,6 +71,7 @@
   background-color: darkred;
   color: orange;
   padding: 5px;
+  margin: 10px;
 }
 
 .submit-button {
@@ -84,16 +87,44 @@
 .fox {
   height: 120px;
   width: 120px;
-  margin: 20px;
+  margin: 15px;
   z-index: 10;
   animation-name: grow;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
+.fox2 {
+  height: 110px;
+  width: 110px;
+  margin: 15px;
+  z-index: 10;
+  animation-name: grow2;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+.fox3 {
+  height: 130px;
+  width: 130px;
+  margin: 15px;
+  z-index: 10;
+  animation-name: grow3;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
 
 .den {
-  height: 120px;
-  width: 180px;
+  height: 100px;
+  width: 140px;
+  margin: 20px;
+}
+.den2 {
+  height: 90px;
+  width: 120px;
+  margin: 20px;
+}
+.den3 {
+  height: 110px;
+  width: 160px;
   margin: 20px;
 }
 
@@ -113,4 +144,20 @@
       height: 130px;}
   100% {width: 120px;
         height: 120px;}
+}
+@keyframes grow2 {
+  0% {width: 110px;
+        height: 110px;}
+  50% {width: 120px;
+      height: 120px;}
+  100% {width: 110px;
+        height: 110px;}
+}
+@keyframes grow3 {
+  0% {width: 130px;
+        height: 130px;}
+  50% {width: 140px;
+      height: 140px;}
+  100% {width: 130px;
+        height: 130px;}
 }

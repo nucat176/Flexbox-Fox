@@ -2,12 +2,12 @@ import React from 'react';
 import {hashHistory} from 'react-router';
 
 
-class LevelSix extends React.Component {
+class LevelEleven extends React.Component {
 
   constructor(props){
     super(props);
-    this.state = {display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start'};
-    this.answer = {display: 'flex', justifyContent: 'center', alignItems: 'center'};
+    this.state = {display: 'flex', flexDirection: 'row', justifyContent: 'flex-start'};
+    this.answer = {display: 'flex', flexDirection: 'column', justifyContent: 'flex-end'};
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
     this.renderNextButton = this.renderNextButton.bind(this);
@@ -20,13 +20,13 @@ class LevelSix extends React.Component {
   handleSubmit(e){
     return e => {
       e.preventDefault();
-      hashHistory.push("/7");
+      hashHistory.push("/12");
     }
   }
 
   renderNextButton(){
-    if(this.state.alignItems === this.answer.alignItems &&
-      this.state.justifyContent === this.answer.justifyContent){
+    if(this.state.justifyContent === this.answer.justifyContent &&
+      this.state.flexDirection === this.answer.flexDirection){
       return (
         <button type="submit" className="submit-button">Next Level!</button>
       );
@@ -40,8 +40,10 @@ class LevelSix extends React.Component {
       <section className="flexbox-fox">
         <form className="console-form" onSubmit={this.handleSubmit()}>
           <p className="description">
-          Lead Mr. Fox to the center of the garden using a combination of
-          justify-content and align-items.
+          Help the foxes find their dens using flex-direction and justify-content.
+          <br/>
+          Notice that when the flex direction is a column, justify-content chances to the vertical
+          and align-items to the horizontal.
           <br/>
           <br/>
           </p>
@@ -49,15 +51,15 @@ class LevelSix extends React.Component {
             <span className="not-submit">
               display: flex;
               <br/>
-              justify-content:
+              flex-direction:
               &nbsp;
-              <input type="text" onChange={this.update("justifyContent")} className="css-input" placeholder="Insert CSS command here!"/>
+              <input type="text" onChange={this.update("flexDirection")} className="css-input" placeholder="Insert CSS command here!"/>
               &nbsp;
               ;
               <br/>
-              align-items:
+              justify-content:
               &nbsp;
-              <input type="text" onChange={this.update("alignItems")} className="css-input" placeholder="Insert CSS command here!"/>
+              <input type="text" onChange={this.update("justifyContent")} className="css-input" placeholder="Insert CSS command here!"/>
               &nbsp;
               ;
             </span>
@@ -68,9 +70,21 @@ class LevelSix extends React.Component {
           <img
             className="fox"
             src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235465/fox13_awuzpm.png"/>
+          <img
+            className="fox2"
+            src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235465/fox13_awuzpm.png"/>
+          <img
+            className="fox3"
+            src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235465/fox13_awuzpm.png"/>
           <div className='den-area' style={this.answer}>
             <img
               className="den"
+              src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235787/cave-entrance-clip-art-at-clker-com-vector-clip-art-online-royalty-fVB7sf-clipart_lm9nfy.png"/>
+            <img
+              className="den2"
+              src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235787/cave-entrance-clip-art-at-clker-com-vector-clip-art-online-royalty-fVB7sf-clipart_lm9nfy.png"/>
+            <img
+              className="den3"
               src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1479235787/cave-entrance-clip-art-at-clker-com-vector-clip-art-online-royalty-fVB7sf-clipart_lm9nfy.png"/>
           </div>
         </div>
@@ -79,4 +93,4 @@ class LevelSix extends React.Component {
   }
 }
 
-export default LevelSix;
+export default LevelEleven;
