@@ -21504,34 +21504,6 @@
 	
 	var _level_thirteen2 = _interopRequireDefault(_level_thirteen);
 	
-	var _level_fourteen = __webpack_require__(242);
-	
-	var _level_fourteen2 = _interopRequireDefault(_level_fourteen);
-	
-	var _level_fifteen = __webpack_require__(243);
-	
-	var _level_fifteen2 = _interopRequireDefault(_level_fifteen);
-	
-	var _level_sixteen = __webpack_require__(244);
-	
-	var _level_sixteen2 = _interopRequireDefault(_level_sixteen);
-	
-	var _level_seventeen = __webpack_require__(245);
-	
-	var _level_seventeen2 = _interopRequireDefault(_level_seventeen);
-	
-	var _level_eighteen = __webpack_require__(246);
-	
-	var _level_eighteen2 = _interopRequireDefault(_level_eighteen);
-	
-	var _level_nineteen = __webpack_require__(247);
-	
-	var _level_nineteen2 = _interopRequireDefault(_level_nineteen);
-	
-	var _level_twenty = __webpack_require__(248);
-	
-	var _level_twenty2 = _interopRequireDefault(_level_twenty);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var Root = function Root() {
@@ -21553,14 +21525,7 @@
 	      _react2.default.createElement(_reactRouter.Route, { path: '10', component: _level_ten2.default }),
 	      _react2.default.createElement(_reactRouter.Route, { path: '11', component: _level_eleven2.default }),
 	      _react2.default.createElement(_reactRouter.Route, { path: '12', component: _level_twelve2.default }),
-	      _react2.default.createElement(_reactRouter.Route, { path: '13', component: _level_thirteen2.default }),
-	      _react2.default.createElement(_reactRouter.Route, { path: '14', component: _level_fourteen2.default }),
-	      _react2.default.createElement(_reactRouter.Route, { path: '15', component: _level_fifteen2.default }),
-	      _react2.default.createElement(_reactRouter.Route, { path: '16', component: _level_sixteen2.default }),
-	      _react2.default.createElement(_reactRouter.Route, { path: '17', component: _level_seventeen2.default }),
-	      _react2.default.createElement(_reactRouter.Route, { path: '18', component: _level_eighteen2.default }),
-	      _react2.default.createElement(_reactRouter.Route, { path: '19', component: _level_nineteen2.default }),
-	      _react2.default.createElement(_reactRouter.Route, { path: '20', component: _level_twenty2.default })
+	      _react2.default.createElement(_reactRouter.Route, { path: '13', component: _level_thirteen2.default })
 	    )
 	  );
 	};
@@ -28616,7 +28581,7 @@
 	    value: function handleSubmit(e) {
 	      return function (e) {
 	        e.preventDefault();
-	        _reactRouter.hashHistory.push("/14");
+	        _reactRouter.hashHistory.push("/");
 	      };
 	    }
 	  }, {
@@ -28624,9 +28589,19 @@
 	    value: function renderNextButton() {
 	      if (this.state.justifyContent === this.answer.justifyContent && this.state.flexDirection === this.answer.flexDirection && this.state.alignItems === this.answer.alignItems) {
 	        return _react2.default.createElement(
-	          'button',
-	          { type: 'submit', className: 'submit-button' },
-	          'Next Level!'
+	          'span',
+	          { className: 'game-won' },
+	          _react2.default.createElement(
+	            'h1',
+	            { className: 'win' },
+	            'You win!'
+	          ),
+	          '\xA0',
+	          _react2.default.createElement(
+	            'button',
+	            { type: 'submit', className: 'submit-button' },
+	            'Back to beginning'
+	          )
 	        );
 	      } else {
 	        return _react2.default.createElement('span', null);
@@ -28644,7 +28619,7 @@
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'description' },
-	            'Help the foxes find their dens using flex-direction, justify-content, and align-items.',
+	            'This is your final challenge! Combine what you have learned to help the foxes find their dens using flex-direction, justify-content, and align-items.',
 	            _react2.default.createElement('br', null),
 	            _react2.default.createElement('br', null)
 	          ),
@@ -28705,48 +28680,6 @@
 	}(_react2.default.Component);
 	
 	exports.default = LevelThirteen;
-
-/***/ },
-/* 242 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-/***/ },
-/* 243 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-/***/ },
-/* 244 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-/***/ },
-/* 245 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-/***/ },
-/* 246 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-/***/ },
-/* 247 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-/***/ },
-/* 248 */
-/***/ function(module, exports) {
-
-	"use strict";
 
 /***/ }
 /******/ ]);

@@ -14,13 +14,6 @@ import LevelTen from './levels/level_ten';
 import LevelEleven from './levels/level_eleven';
 import LevelTwelve from './levels/level_twelve';
 import LevelThirteen from './levels/level_thirteen';
-import LevelFourteen from './levels/level_fourteen';
-import LevelFifteen from './levels/level_fifteen';
-import LevelSixteen from './levels/level_sixteen';
-import LevelSeventeen from './levels/level_seventeen';
-import LevelEighteen from './levels/level_eighteen';
-import LevelNineteen from './levels/level_nineteen';
-import LevelTwenty from './levels/level_twenty';
 
 const Root = () => {
   return (
@@ -39,13 +32,6 @@ const Root = () => {
         <Route path="11" component={LevelEleven}/>
         <Route path="12" component={LevelTwelve}/>
         <Route path="13" component={LevelThirteen}/>
-        <Route path="14" component={LevelFourteen}/>
-        <Route path="15" component={LevelFifteen}/>
-        <Route path="16" component={LevelSixteen}/>
-        <Route path="17" component={LevelSeventeen}/>
-        <Route path="18" component={LevelEighteen}/>
-        <Route path="19" component={LevelNineteen}/>
-        <Route path="20" component={LevelTwenty}/>
       </Route>
     </Router>
   )

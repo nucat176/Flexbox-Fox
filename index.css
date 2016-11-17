@@ -30,6 +30,7 @@
 .console-form {
   display: flex;
   flex-direction: column;
+  min-width: 50%;
   padding: 20px;
   width: 50%;
   font-size: 20px;
@@ -41,6 +42,7 @@
   min-height: 800px;
   background-color: green;
   position: relative;
+  right: 0;
 }
 
 .commands-list {
@@ -135,6 +137,15 @@
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.game-won {
+  display: flex;
+  align-items: center;
+}
+
+.win {
+  font-size: 30px;
 }
 
 @keyframes grow {

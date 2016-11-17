@@ -20,7 +20,7 @@ class LevelThirteen extends React.Component {
   handleSubmit(e){
     return e => {
       e.preventDefault();
-      hashHistory.push("/14");
+      hashHistory.push("/");
     }
   }
 
@@ -29,7 +29,11 @@ class LevelThirteen extends React.Component {
       this.state.flexDirection === this.answer.flexDirection &&
       this.state.alignItems === this.answer.alignItems){
       return (
-        <button type="submit" className="submit-button">Next Level!</button>
+        <span className="game-won">
+          <h1 className="win">You win!</h1>
+          &nbsp;
+          <button type="submit" className="submit-button">Back to beginning</button>
+        </span>
       );
     } else {
       return (<span></span>);
@@ -41,7 +45,8 @@ class LevelThirteen extends React.Component {
       <section className="flexbox-fox">
         <form className="console-form" onSubmit={this.handleSubmit()}>
           <p className="description">
-          Help the foxes find their dens using flex-direction, justify-content, and align-items.
+          This is your final challenge! Combine what you have learned to help the foxes find their dens using
+          flex-direction, justify-content, and align-items.
           <br/>
           <br/>
           </p>
