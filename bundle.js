@@ -28159,7 +28159,7 @@
 	    var _this = _possibleConstructorReturn(this, (LevelTen.__proto__ || Object.getPrototypeOf(LevelTen)).call(this, props));
 	
 	    _this.state = { display: 'flex', flexDirection: 'row', justifyContent: 'flex-start' };
-	    _this.answer = { display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' };
+	    _this.answer = { display: 'flex', flexDirection: 'row-reverse', justifyContent: 'flex-end' };
 	    _this.handleSubmit = _this.handleSubmit.bind(_this);
 	    _this.update = _this.update.bind(_this);
 	    _this.renderNextButton = _this.renderNextButton.bind(_this);

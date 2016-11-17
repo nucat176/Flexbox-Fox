@@ -7,7 +7,7 @@ class LevelTen extends React.Component {
   constructor(props){
     super(props);
     this.state = {display: 'flex', flexDirection: 'row', justifyContent: 'flex-start'};
-    this.answer = {display: 'flex', flexDirection: 'column', justifyContent: 'flex-end'};
+    this.answer = {display: 'flex', flexDirection: 'row-reverse', justifyContent: 'flex-end'};
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
     this.renderNextButton = this.renderNextButton.bind(this);
