@@ -18,9 +18,15 @@ class LevelSix extends React.Component {
   }
 
   handleSubmit(e){
+    let that = this;
     return e => {
       e.preventDefault();
-      hashHistory.push("/7");
+      if(this.state.alignItems === this.answer.alignItems &&
+        this.state.justifyContent === this.answer.justifyContent){
+          hashHistory.push("/7");
+      } else {
+        alert("Try again!");
+      }
     }
   }
 

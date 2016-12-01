@@ -18,9 +18,14 @@ class LevelEight extends React.Component {
   }
 
   handleSubmit(e){
+    let that = this;
     return e => {
       e.preventDefault();
-      hashHistory.push("/9");
+      if(this.state.flexDirection === this.answer.flexDirection){
+        hashHistory.push("/9");
+      } else {
+        alert("Try again!");
+      }
     }
   }
 

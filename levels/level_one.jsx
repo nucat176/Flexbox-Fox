@@ -17,9 +17,14 @@ class LevelOne extends React.Component {
   }
 
   handleSubmit(e){
+    let that = this;
     return e => {
       e.preventDefault();
-      hashHistory.push("/2");
+      if(this.state.justifyContent === this.answer.justifyContent){
+        hashHistory.push("/2");
+      } else {
+        alert("Try again!");
+      }
     }
   }
 

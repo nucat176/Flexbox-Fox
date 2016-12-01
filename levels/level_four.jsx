@@ -18,9 +18,14 @@ class LevelFour extends React.Component {
   }
 
   handleSubmit(e){
+    let that = this;
     return e => {
       e.preventDefault();
-      hashHistory.push("/5");
+      if(this.state.justifyContent === this.answer.justifyContent){
+        hashHistory.push("/5");
+      } else {
+        alert("Try again!");
+      }
     }
   }
 

@@ -18,9 +18,15 @@ class LevelTen extends React.Component {
   }
 
   handleSubmit(e){
+    let that = this;
     return e => {
       e.preventDefault();
-      hashHistory.push("/11");
+      if(this.state.justifyContent === this.answer.justifyContent &&
+        this.state.flexDirection === this.state.flexDirection){
+          hashHistory.push("/11");
+      } else {
+        alert("Try again!");
+      }
     }
   }
 

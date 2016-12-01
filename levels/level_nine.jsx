@@ -18,9 +18,14 @@ class LevelNine extends React.Component {
   }
 
   handleSubmit(e){
+    let that = this;
     return e => {
       e.preventDefault();
-      hashHistory.push("/10");
+      if(this.state.flexDirection === this.answer.flexDirection){
+        hashHistory.push("/10");
+      } else {
+        alert("Try again!");
+      }
     }
   }
 

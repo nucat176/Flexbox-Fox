@@ -26545,9 +26545,16 @@
 	  }, {
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
+	      var _this3 = this;
+	
+	      var that = this;
 	      return function (e) {
 	        e.preventDefault();
-	        _reactRouter.hashHistory.push("/2");
+	        if (_this3.state.justifyContent === _this3.answer.justifyContent) {
+	          _reactRouter.hashHistory.push("/2");
+	        } else {
+	          alert("Try again!");
+	        }
 	      };
 	    }
 	  }, {
@@ -26733,9 +26740,16 @@
 	  }, {
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
+	      var _this3 = this;
+	
+	      var that = this;
 	      return function (e) {
 	        e.preventDefault();
-	        _reactRouter.hashHistory.push("/3");
+	        if (_this3.state.justifyContent === _this3.answer.justifyContent) {
+	          _reactRouter.hashHistory.push("/3");
+	        } else {
+	          alert("Try again!");
+	        }
 	      };
 	    }
 	  }, {
@@ -26919,9 +26933,16 @@
 	  }, {
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
+	      var _this3 = this;
+	
+	      var that = this;
 	      return function (e) {
 	        e.preventDefault();
-	        _reactRouter.hashHistory.push("/4");
+	        if (_this3.state.justifyContent === _this3.answer.justifyContent) {
+	          _reactRouter.hashHistory.push("/4");
+	        } else {
+	          alert("Try again!");
+	        }
 	      };
 	    }
 	  }, {
@@ -27114,9 +27135,16 @@
 	  }, {
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
+	      var _this3 = this;
+	
+	      var that = this;
 	      return function (e) {
 	        e.preventDefault();
-	        _reactRouter.hashHistory.push("/5");
+	        if (_this3.state.justifyContent === _this3.answer.justifyContent) {
+	          _reactRouter.hashHistory.push("/5");
+	        } else {
+	          alert("Try again!");
+	        }
 	      };
 	    }
 	  }, {
@@ -27309,9 +27337,16 @@
 	  }, {
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
+	      var _this3 = this;
+	
+	      var that = this;
 	      return function (e) {
 	        e.preventDefault();
-	        _reactRouter.hashHistory.push("/6");
+	        if (_this3.state.alignItems === _this3.answer.alignItems) {
+	          _reactRouter.hashHistory.push("/6");
+	        } else {
+	          alert("Try again!");
+	        }
 	      };
 	    }
 	  }, {
@@ -27503,9 +27538,16 @@
 	  }, {
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
+	      var _this3 = this;
+	
+	      var that = this;
 	      return function (e) {
 	        e.preventDefault();
-	        _reactRouter.hashHistory.push("/7");
+	        if (_this3.state.alignItems === _this3.answer.alignItems && _this3.state.justifyContent === _this3.answer.justifyContent) {
+	          _reactRouter.hashHistory.push("/7");
+	        } else {
+	          alert("Try again!");
+	        }
 	      };
 	    }
 	  }, {
@@ -27635,9 +27677,16 @@
 	  }, {
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
+	      var _this3 = this;
+	
+	      var that = this;
 	      return function (e) {
 	        e.preventDefault();
-	        _reactRouter.hashHistory.push("/8");
+	        if (_this3.state.alignItems === _this3.answer.alignItems && _this3.state.justifyContent === _this3.answer.justifyContent) {
+	          _reactRouter.hashHistory.push("/8");
+	        } else {
+	          alert("Try again!");
+	        }
 	      };
 	    }
 	  }, {
@@ -27777,9 +27826,16 @@
 	  }, {
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
+	      var _this3 = this;
+	
+	      var that = this;
 	      return function (e) {
 	        e.preventDefault();
-	        _reactRouter.hashHistory.push("/9");
+	        if (_this3.state.flexDirection === _this3.answer.flexDirection) {
+	          _reactRouter.hashHistory.push("/9");
+	        } else {
+	          alert("Try again!");
+	        }
 	      };
 	    }
 	  }, {
@@ -27959,9 +28015,16 @@
 	  }, {
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
+	      var _this3 = this;
+	
+	      var that = this;
 	      return function (e) {
 	        e.preventDefault();
-	        _reactRouter.hashHistory.push("/10");
+	        if (_this3.state.flexDirection === _this3.answer.flexDirection) {
+	          _reactRouter.hashHistory.push("/10");
+	        } else {
+	          alert("Try again!");
+	        }
 	      };
 	    }
 	  }, {
@@ -28143,9 +28206,16 @@
 	  }, {
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
+	      var _this3 = this;
+	
+	      var that = this;
 	      return function (e) {
 	        e.preventDefault();
-	        _reactRouter.hashHistory.push("/11");
+	        if (_this3.state.justifyContent === _this3.answer.justifyContent && _this3.state.flexDirection === _this3.state.flexDirection) {
+	          _reactRouter.hashHistory.push("/11");
+	        } else {
+	          alert("Try again!");
+	        }
 	      };
 	    }
 	  }, {
@@ -28289,9 +28359,16 @@
 	  }, {
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
+	      var _this3 = this;
+	
+	      var that = this;
 	      return function (e) {
 	        e.preventDefault();
-	        _reactRouter.hashHistory.push("/12");
+	        if (_this3.state.justifyContent === _this3.answer.justifyContent && _this3.state.flexDirection === _this3.answer.flexDirection) {
+	          _reactRouter.hashHistory.push("/12");
+	        } else {
+	          alert("Try again!");
+	        }
 	      };
 	    }
 	  }, {
@@ -28435,9 +28512,16 @@
 	  }, {
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
+	      var _this3 = this;
+	
+	      var that = this;
 	      return function (e) {
 	        e.preventDefault();
-	        _reactRouter.hashHistory.push("/13");
+	        if (_this3.state.justifyContent === _this3.answer.justifyContent && _this3.state.flexDirection === _this3.answer.flexDirection) {
+	          _reactRouter.hashHistory.push("/13");
+	        } else {
+	          alert("Try again!");
+	        }
 	      };
 	    }
 	  }, {
@@ -28579,9 +28663,16 @@
 	  }, {
 	    key: 'handleSubmit',
 	    value: function handleSubmit(e) {
+	      var _this3 = this;
+	
+	      var that = this;
 	      return function (e) {
 	        e.preventDefault();
-	        _reactRouter.hashHistory.push("/");
+	        if (_this3.state.justifyContent === _this3.answer.justifyContent && _this3.state.flexDirection === _this3.answer.flexDirection && _this3.state.alignItems === _this3.answer.alignItems) {
+	          _reactRouter.hashHistory.push("/");
+	        } else {
+	          alert("Try again!");
+	        }
 	      };
 	    }
 	  }, {

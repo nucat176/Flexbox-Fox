@@ -18,9 +18,14 @@ class LevelTwo extends React.Component {
   }
 
   handleSubmit(e){
+    let that = this;
     return e => {
       e.preventDefault();
-      hashHistory.push("/3");
+      if(this.state.justifyContent === this.answer.justifyContent){
+        hashHistory.push("/3");
+      } else {
+        alert("Try again!");
+      }
     }
   }
 

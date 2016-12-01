@@ -18,9 +18,14 @@ class LevelFive extends React.Component {
   }
 
   handleSubmit(e){
+    let that = this;
     return e => {
       e.preventDefault();
-      hashHistory.push("/6");
+      if(this.state.alignItems === this.answer.alignItems){
+        hashHistory.push("/6");
+      } else {
+        alert("Try again!");
+      }
     }
   }
 

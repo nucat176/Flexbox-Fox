@@ -18,9 +18,15 @@ class LevelEleven extends React.Component {
   }
 
   handleSubmit(e){
+    let that = this;
     return e => {
       e.preventDefault();
-      hashHistory.push("/12");
+      if(this.state.justifyContent === this.answer.justifyContent &&
+        this.state.flexDirection === this.answer.flexDirection){
+          hashHistory.push("/12");
+      } else {
+        alert("Try again!");
+      }
     }
   }
 

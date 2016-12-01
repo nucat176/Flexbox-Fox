@@ -18,9 +18,16 @@ class LevelThirteen extends React.Component {
   }
 
   handleSubmit(e){
+    let that = this;
     return e => {
       e.preventDefault();
-      hashHistory.push("/");
+      if(this.state.justifyContent === this.answer.justifyContent &&
+        this.state.flexDirection === this.answer.flexDirection &&
+        this.state.alignItems === this.answer.alignItems){
+          hashHistory.push("/");
+      } else {
+        alert("Try again!");
+      }
     }
   }
 
