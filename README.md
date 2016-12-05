@@ -1,66 +1,21 @@
 # Flexbox Fox
 
-### Background
+[Flexbox Fox live][heroku]
 
-Flexbox Fox is a CSS flexbox tutorial game inspired by Flexbox Froggy (flexboxfroggy.com). The idea is to lead the foxes
-to their dens using CSS flexbox tricks such as justify-content, align-items, flex-direction, etc.
+[heroku]: https://nucat176.github.io/Flexbox-Fox/#/
 
-### Functionality & MVP  
+Flexbox Fox is a web tutorial application inspired by Flexbox Froggy (http://flexboxfroggy.com/) for learning CSS Flexbox. This is a purely front-end application, created using Javascript and React, and a clever implementation of DOM manipulation allows the user to input CSS Flexbox commands in order to guide a group of foxes to their dens. The utilization of React Router allows for the user to easily navigate through 13 levels using a wide variety of Flexbox commands.
 
-With Flexbox Fox, users will be able to:
+## Features & Implementation
 
-- [ ] Type in CSS flexbox commands via a console
-- [ ] See previews of the various flexbox commands via the movement of the foxes on the screen
-- [ ] Advance through a variety of different stages to learn many of the available commands
+### Direct DOM Manipulation for Users
 
-In addition, this project will include:
+The use of React.js to construct the entire application made it easy to implement a pseudo-console for the user to interact directly with the DOM. On the left side of the screen is the "console", which is really just an HTML form for inputting the required CSS flexbox commands for each level. On the right side of the screen is the "garden" where the foxes reside, and the user's goal is to input the correct flexbox command(s) such that the foxes will find their dens. The HTML form that comprises the "console" has a handler method for when the form is submitted. This handler will check if the user has input the correct command(s), and will either render a button to move on to the next level, or display an error message if the command is incorrect.
 
-- [ ] A production Readme
+### Level Hierarchy
 
-### Wireframes
+This application also utilizes React Router in order to design the ladder of stages that the user can work through. The aforementioned "console" form also has a success callback that tells the Router to push the next stage into the Hash History, should the user input the correct command(s).
 
-This app will consist of a single screen with game board, game controls, and nav links to the Github, my LinkedIn,
-and the About modal.
+### Hand-rolled CSS
 
-![wireframes](http://res.cloudinary.com/dfufqfnjx/image/upload/v1479104494/Flexbox_Fox_qepjjv.png)
-
-### Architecture and Technologies
-
-This project will be implemented with the following technologies:
-
-- Vanilla JavaScript and `React` for overall structure and game logic
-- CSS to render new styling to the board
-- Webpack to bundle and serve up the various scripts.
-
-In addition to the webpack entry file, there will be two scripts involved in this project:
-
-`board.js`: this script will handle the logic for creating and updating the necessary CSS Flexbox elements and rendering them to the DOM.
-
-`console.js`: this script will be responsible for rendering the console that the user will interact with as well as housing the logic that translates the user's inputs to CSS
-
-'fox.js': this script will be responsible for rendering the foxes onto the board.
-
-### Implementation Timeline
-
-**Day 1**: Setup all necessary Node modules, including getting webpack up and running.  Create `webpack.config.js` as well as `package.json`.  Write a basic entry file and the bare bones of both scripts outlined above.  Goals for the day:
-
-- Get a green bundle with `webpack`
-
-**Day 2**: Get started on board.js and do research on how to render a console to the DOM. Goals for the day:
-
-- Complete the `board.js` module
-- Begin researching how to implement a console to the DOM
-- Design unique challenges for each level
-
-**Day 3 + 4 **: Create the CSS logic backend, and attach that logic to the foxes.
-- Export a `Console` object with correct type and handling logic
-- Export a `Fox` object with functions mapped to the console logic
-- Have a functional frontend that correctly handles each level of the game
-- Have a styled interface, nice looking controls and title
-
-
-### Bonus features
-
-The biggest anticipated update is:
-
-- [ ] Add more levels with advanced challenges
+While the look and feel of the application is based heavily on its inspiration (Flexbox Froggy), I designed the CSS from scratch, using (you guessed it) flexbox.  
